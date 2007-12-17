@@ -12,7 +12,6 @@ BuildRequires:	perl-devel
 BuildRequires:  perl(CGI)
 BuildRequires:  perl-Object-Persistence
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module provides transparent state persistence for CGI applications.
