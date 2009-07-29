@@ -1,24 +1,26 @@
-%define real_name CGI-Persistent
+%define upstream_name    CGI-Persistent
+%define upstream_version 1.11
+
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
 Summary:	CGI-Persistent module for perl 
-Name:		perl-%{real_name}
-Version:	1.11
-Release: %mkrel 1
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{real_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CGI/%{real_name}-%{version}.tar.gz
-BuildRequires:	perl-devel
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/CGI/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:  perl(CGI)
 BuildRequires:  perl-Object-Persistence
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module provides transparent state persistence for CGI applications.
 
 %prep
-%setup -q -n %{real_name}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 chmod 0755 html/roach.cgi
 
 %build
@@ -38,7 +40,3 @@ rm -rf %{buildroot}
 %doc html/*
 %{perl_vendorlib}/CGI/Persistent.pm
 %{_mandir}/*/*
-
-
-
-
