@@ -1,15 +1,13 @@
 %define upstream_name    CGI-Persistent
-%define upstream_version 1.11
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	1.11
+Release:	7
 
 Summary:	CGI-Persistent module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/CGI-Persistent
-Source0:	https://cpan.metacpan.org/authors/id/V/VI/VIPUL/CGI-Persistent-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/V/VI/VIPUL/CGI-Persistent-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -21,7 +19,7 @@ BuildArch:	noarch
 This module provides transparent state persistence for CGI applications.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 chmod 0755 html/roach.cgi
 
 %build
@@ -45,9 +43,7 @@ make test
 
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 1.110.0-1mdv2011.0
 + Revision: 403003
-- rebuild using %%perl_convert_version
-
-* Sun Jul 06 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.11-1mdv2009.0
+- rebuild using %1.11 Sun Jul 06 2008 Guillaume Rousse <guillomovitch@mandriva.org> 1.11-1mdv2009.0
 + Revision: 232106
 - update to new version 1.11
 
