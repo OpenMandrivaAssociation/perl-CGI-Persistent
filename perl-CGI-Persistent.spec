@@ -1,13 +1,14 @@
 %define upstream_name    CGI-Persistent
+%define upstream_version 1.11
 Name:		perl-%{upstream_name}
 Version:	1.11
-Release:	7
+Release:	1
 
 Summary:	CGI-Persistent module for perl 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/CGI-Persistent
-Source0:	https://cpan.metacpan.org/authors/id/V/VI/VIPUL/CGI-Persistent-%{version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/V/VI/VIPUL/CGI-Persistent-1.11.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
