@@ -2,7 +2,7 @@
 %define upstream_version 1.11
 Name:		perl-%{upstream_name}
 Version:	1.11
-Release:	15
+Release:	16
 
 Summary:	CGI-Persistent module for perl 
 License:	GPL+ or Artistic
